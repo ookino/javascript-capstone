@@ -141,3 +141,9 @@ footer {
   background: var(--primary-color);
   color: var(--background-color);
 }
+
+.btn-alt {
+  margin-top: 1em;
+  color: var(--background-color);
+  background: var(--secondary-color);
+}

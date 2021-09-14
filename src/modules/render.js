@@ -28,6 +28,10 @@ const renderMeals = (mealsData) => {
     commentBtn.className = 'btn';
     commentBtn.innerText = 'Comment';
     li.appendChild(commentBtn);
+    const reserveBtn = document.createElement('button');
+    reserveBtn.className = 'btn btn-alt';
+    reserveBtn.innerText = 'Reserve';
+    li.appendChild(reserveBtn);
     ul.appendChild(li);
   });
 };
