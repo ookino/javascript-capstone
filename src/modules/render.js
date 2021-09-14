@@ -1,0 +1,35 @@
+const ul = document.getElementById('meal-list');
+const renderMeals = (mealsData) => {
+  console.log(mealsData);
+  const { meals } = mealsData;
+  console.log(meals);
+
+  meals.forEach((mealItem) => {
+    const li = document.createElement('li');
+    li.className = 'meal-item';
+    const img = document.createElement('img');
+    img.src = mealItem.strMealThumb;
+    img.className = 'meal-image';
+    li.appendChild(img);
+    const div = document.createElement('div');
+    div.className = 'meal-meta';
+    li.appendChild(div);
+    const p = document.createElement('p');
+    p.className = 'meal-title';
+    p.innerText = mealItem.strMeal;
+    div.appendChild(p);
+    const likeBtn = document.createElement('button');
+    likeBtn.className = 'icn-btn';
+    div.appendChild(likeBtn);
+    const likeIcon = document.createElement('i');
+    likeIcon.className = 'far fa-heart';
+    likeBtn.appendChild(likeIcon);
+    const commentBtn = document.createElement('button');
+    commentBtn.className = 'btn';
+    commentBtn.innerText = 'Comment';
+    li.appendChild(commentBtn);
+    ul.appendChild(li);
+  });
+};
+
+export default renderMeals;
