@@ -1,6 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #e85a4f;
+  --secondary-color: #272727;
+  --background-color: #fdf7f6;
+}
 
 body {
+  color: var(--secondary-color);
+  background-color: var(--background-color);
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -8,18 +17,20 @@ body {
 }
 
 .header {
-  height: 50px;
   background-color: #fff;
 }
 
 .logo {
-  width: 100%;
-  height: 100%;
+  font-family: 'Space Grotesk', sans-serif;
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  font-weight: 700;
 }
 
-#logo {
-  transition-duration: 1s;
-  transform: rotate(360deg);
+.logo i {
+  margin-right: 0.3em;
+  color: var(--primary-color);
 }
 
 .nav-bar {
@@ -27,7 +38,6 @@ body {
   justify-content: space-between;
   width: 70%;
   margin: 0 auto;
-  padding-top: 20px;
   align-items: center;
 }
 
@@ -38,22 +48,12 @@ body {
 }
 
 .nav-buttons a {
+  font-weight: 500;
+  color: #101820ff;
   text-decoration: none;
-  height: 2em;
-  padding: 0.5em 1em;
+  padding: 1em;
 }
 
 .nav-buttons a:hover {
   text-decoration: underline;
-}
-  
-@media screen and (min-width: 600px) {
-  .fontawesome {
-  display: none;
-  }
-
-  .logo {
-    width: 35%;
-    height: 35%;
-  }
 }
