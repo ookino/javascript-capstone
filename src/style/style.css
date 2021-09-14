@@ -57,3 +57,21 @@ body {
 .nav-buttons a:hover {
   text-decoration: underline;
 }
+
+footer {
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+  flex-shrink: 0;
+  background-color: white;
+  position: absolute;
+  bottom: 0%;
+}
+
+.footer-bar {
+  text-align: center;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: bold;
+}
