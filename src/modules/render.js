@@ -36,4 +36,6 @@ const renderMeals = (mealsData) => {
   });
 };
 
-export default renderMeals;
+const renderModal = () => {};
+
+export { renderMeals, renderModal };
