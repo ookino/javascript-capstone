@@ -22,7 +22,18 @@ const API = {
   },
 
   getComments: async () => {},
-  getReservations: async () => {},
+  getReservations: async () => {
+    const res = await fetch(
+      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/reservations/',
+      { method: 'GET' },
+    );
+    if (!res.ok) {
+      throw new Error(`API error! status: ${res.status}`);
+    } else {
+      const data = await res.json();
+      return data;
+    }
+  },
 };
 
 export default API;
