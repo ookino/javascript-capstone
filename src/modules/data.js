@@ -11,7 +11,7 @@ const API = {
   getLikes: async () => {
     const res = await fetch(
       'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lvQFdeSbvijlsDX1Y4VY/likes/',
-      { method: 'GET' }
+      { method: 'GET' },
     );
     if (!res.ok) {
       throw new Error(`API error! status: ${res.status}`);
