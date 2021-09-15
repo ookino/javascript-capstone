@@ -258,16 +258,16 @@ footer {
   width: 50%;
 }
 
+.reserve-details a {
+  color: black;
+  text-decoration: none;
+}
+
 .category,
 .area,
 .recipe,
 .video-instruction {
   color: #e85a4f;
-}
-
-a {
-  text-decoration: none;
-  color: black;
 }
 
 .reservation-form-title {
