@@ -38,29 +38,29 @@ const renderModal = (meal) => {
 
 const renderReserveModal = (meal) => {
   reserveModal.innerHTML = `
-  <div class="reserve-container">
-    <div class="close-section">
-      <button class="close-btn icn-btn">&times;</button>
+  <div class='reserve-container'>
+    <div class='close-section'>
+      <button class='close-btn icn-btn'>&times;</button>
     </div>
-    <div class="reserve-content">
-      <img src="${meal.strMealThumb}" alt="" class="reserve-img">
-      <h2 class="reserve-title">${meal.strMeal}</h2>
-      <ul class="meal-info">
-        <li class="reserve-details"><span class="category">Category:</span> ${meal.strCategory}</li>
-        <li class="reserve-details"><span class="area">Area:</span> ${meal.strArea}</li>
-        <li class="reserve-details"><span class="recipe">Recipe:</span> <a href='${meal.strSource}' target="blank">Recipe Link</a></li>
-        <li class="reserve-details"><span class="video-instruction">Video Instruction:</span> <a href='${meal.strYoutube}' target="blank">YouTube Link</a></li>
+    <div class='reserve-content'>
+      <img src='${meal.strMealThumb}' alt='' class='reserve-img'>
+      <h2 class='reserve-title'>${meal.strMeal}</h2>
+      <ul class='meal-info'>
+        <li class='reserve-details'><span class='category'>Category:</span> ${meal.strCategory}</li>
+        <li class='reserve-details'><span class='area'>Area:</span> ${meal.strArea}</li>
+        <li class='reserve-details'><span class='recipe'>Recipe:</span> <a href='${meal.strSource}' target='blank'>Recipe Link</a></li>
+        <li class='reserve-details'><span class='video-instruction'>Video Instruction:</span> <a href='${meal.strYoutube}' target='blank'>YouTube Link</a></li>
       </ul>
       <div>
-        <h2 class="section-title">Reservations</h2>
+        <h2 class='section-title'>Reservations</h2>
       </div>
-      <div class="reservation-form">
-        <h2 class="reservation-form-title">Add a reservation</h2>
-        <form class="form">
-          <input type="text" name="username" placeholder='Your name' required />
-          <input type="date" name="start-date" placeholder='Start Date' required />
-          <input type="date" name="end-date" placeholder='End Date' required />
-          <button type="submit" class="reserve-submit-button">Reserve</button>
+      <div class='reservation-form'>
+        <h2 class='reservation-form-title'>Add a reservation</h2>
+        <form class='form'>
+          <input type='text' name='username' placeholder='Your name' required />
+          <input type='date' name='start-date' placeholder='Start Date' required />
+          <input type='date' name='end-date' placeholder='End Date' required />
+          <button type='submit' class='reserve-submit-button'>Reserve</button>
         </form>
       </div>
     </div>
