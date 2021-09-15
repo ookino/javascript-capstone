@@ -5,11 +5,12 @@ import renderMeals from './modules/render';
 
 const endpoint = 'https://www.themealdb.com/api/json/v1/1/';
 const likesEndpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lvQFdeSbvijlsDX1Y4VY/likes/';
-
+const reserveEndpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/reservations/';
 const displayMeals = () => {
   Promise.all([
     API.getMeals(`${endpoint}search.php?f=b`),
     API.getLikes(likesEndpoint),
+    API.getLikes(reserveEndpoint),
   ]).then((data) => {
     renderMeals(data[0], data[1]);
   });

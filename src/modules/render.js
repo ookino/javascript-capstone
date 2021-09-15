@@ -113,8 +113,10 @@ const renderReserveModal = (meal) => {
   reserveContent.appendChild(sectionTitle);
   const sectionTitleHeader = document.createElement('h2');
   sectionTitleHeader.className = 'section-title';
-  sectionTitleHeader.innerHTML = 'Reservations';
+  sectionTitleHeader.innerHTML = 'Reservations(0)';
   sectionTitle.appendChild(sectionTitleHeader);
+  const reservationList = document.createElement('div');
+  sectionTitle.appendChild(reservationList);
   const reservationForm = document.createElement('div');
   reservationForm.className = 'reservation-form';
   reserveContent.appendChild(reservationForm);

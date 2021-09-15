@@ -6,6 +6,13 @@ const involvement = {
     }
     return 0;
   },
+  reservations: (reservationsData, mealID) => {
+    const reservationLists = reservationsData.find((i) => i.item_id === mealID);
+    if (reservationLists !== undefined) {
+      return reservationLists.reservations;
+    }
+    return 0;
+  },
 };
 
 export default involvement;
