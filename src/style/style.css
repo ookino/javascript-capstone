@@ -123,6 +123,12 @@ footer {
   border-radius: 0.5em;
 }
 
+.like-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .meal-meta {
   display: flex;
   justify-content: space-between;
