@@ -37,36 +37,116 @@ const renderModal = (meal) => {
 };
 
 const renderReserveModal = (meal) => {
-  reserveModal.innerHTML = `
-  <div class='reserve-container'>
-    <div class='close-section'>
-      <button class='close-btn icn-btn'>&times;</button>
-    </div>
-    <div class='reserve-content'>
-      <img src='${meal.strMealThumb}' alt='' class='reserve-img'>
-      <h2 class='reserve-title'>${meal.strMeal}</h2>
-      <ul class='meal-info'>
-        <li class='reserve-details'><span class='category'>Category:</span> ${meal.strCategory}</li>
-        <li class='reserve-details'><span class='area'>Area:</span> ${meal.strArea}</li>
-        <li class='reserve-details'><span class='recipe'>Recipe:</span> <a href='${meal.strSource}' target='blank'>Recipe Link</a></li>
-        <li class='reserve-details'><span class='video-instruction'>Video Instruction:</span> <a href='${meal.strYoutube}' target='blank'>YouTube Link</a></li>
-      </ul>
-      <div>
-        <h2 class='section-title'>Reservations</h2>
-      </div>
-      <div class='reservation-form'>
-        <h2 class='reservation-form-title'>Add a reservation</h2>
-        <form class='form'>
-          <input type='text' name='username' placeholder='Your name' required />
-          <input type='date' name='start-date' placeholder='Start Date' required />
-          <input type='date' name='end-date' placeholder='End Date' required />
-          <button type='submit' class='reserve-submit-button'>Reserve</button>
-        </form>
-      </div>
-    </div>
-  </div>`;
-  const closeButton = document.querySelector('.close-btn');
-  const reserveContainer = document.querySelector('.reserve-container');
+  const reserveContainer = document.createElement('div');
+  reserveContainer.className = 'reserve-container';
+  const closeSection = document.createElement('div');
+  closeSection.className = 'close-section';
+  reserveContainer.appendChild(closeSection);
+  const closeButton = document.createElement('button');
+  closeButton.className = 'close-btn icn-btn';
+  closeButton.innerHTML = '&times;';
+  closeSection.appendChild(closeButton);
+  const reserveContent = document.createElement('div');
+  reserveContent.className = 'reserve-content';
+  reserveContainer.appendChild(reserveContent);
+  const reserveImg = document.createElement('img');
+  reserveImg.className = 'reserve-img';
+  reserveImg.src = meal.strMealThumb;
+  reserveContent.appendChild(reserveImg);
+  const reserveTitle = document.createElement('h2');
+  reserveTitle.className = 'reserve-title';
+  reserveTitle.innerText = meal.strMeal;
+  reserveContent.appendChild(reserveTitle);
+  const mealInfo = document.createElement('ul');
+  mealInfo.className = 'meal-info';
+  reserveContent.appendChild(mealInfo);
+
+  const category = document.createElement('li');
+  category.className = 'reserve-details';
+  mealInfo.appendChild(category);
+  const categorySpan = document.createElement('span');
+  categorySpan.className = 'category';
+  categorySpan.innerHTML = 'Category: ';
+  category.appendChild(categorySpan);
+  const categorySpanSpan = document.createElement('span');
+  categorySpanSpan.innerText = meal.strCategory;
+  category.appendChild(categorySpanSpan);
+
+  const area = document.createElement('li');
+  area.className = 'reserve-details';
+  mealInfo.appendChild(area);
+  const areaSpan = document.createElement('span');
+  areaSpan.className = 'area';
+  areaSpan.innerHTML = 'Area: ';
+  area.appendChild(areaSpan);
+  const areaSpanSpan = document.createElement('span');
+  areaSpanSpan.innerText = meal.strArea;
+  area.appendChild(areaSpanSpan);
+
+  const recipe = document.createElement('li');
+  recipe.className = 'reserve-details';
+  mealInfo.appendChild(recipe);
+  const recipeSpan = document.createElement('span');
+  recipeSpan.className = 'recipe';
+  recipeSpan.innerHTML = 'Recipe: ';
+  recipe.appendChild(recipeSpan);
+  const recipeSrc = document.createElement('a');
+  recipeSrc.href = 'meal.strSource';
+  recipeSrc.innerHTML = 'Recipe Link';
+  recipe.appendChild(recipeSrc);
+
+  const videoInstruction = document.createElement('li');
+  videoInstruction.className = 'reserve-details';
+  mealInfo.appendChild(videoInstruction);
+  const videoSpan = document.createElement('span');
+  videoSpan.className = 'video-instruction';
+  videoSpan.innerHTML = 'Video: ';
+  videoInstruction.appendChild(videoSpan);
+  const videoSrc = document.createElement('a');
+  videoSrc.href = 'meal.strYoutube';
+  videoSrc.innerHTML = 'YouTube Link';
+  videoInstruction.appendChild(videoSrc);
+
+  const sectionTitle = document.createElement('div');
+  reserveContent.appendChild(sectionTitle);
+  const sectionTitleHeader = document.createElement('h2');
+  sectionTitleHeader.className = 'section-title';
+  sectionTitleHeader.innerHTML = 'Reservations';
+  sectionTitle.appendChild(sectionTitleHeader);
+  const reservationForm = document.createElement('div');
+  reservationForm.className = 'reservation-form';
+  reserveContent.appendChild(reservationForm);
+  const reservationFormTitle = document.createElement('h2');
+  reservationFormTitle.className = 'reservation-form-title';
+  reservationFormTitle.innerHTML = 'Add a reservation';
+  reservationForm.appendChild(reservationFormTitle);
+  const reserveForm = document.createElement('form');
+  reserveForm.className = 'form';
+  reservationForm.appendChild(reserveForm);
+  const inputReserveName = document.createElement('input');
+  inputReserveName.type = 'text';
+  inputReserveName.name = 'username';
+  inputReserveName.placeholder = 'Your Name';
+  inputReserveName.attributes.required = true;
+  reserveForm.appendChild(inputReserveName);
+  const inputReserveStartDate = document.createElement('input');
+  inputReserveStartDate.type = 'date';
+  inputReserveStartDate.name = 'start-date';
+  inputReserveStartDate.placeholder = 'Start Date';
+  inputReserveName.attributes.required = true;
+  reserveForm.appendChild(inputReserveStartDate);
+  const inputReserveEndDate = document.createElement('input');
+  inputReserveEndDate.type = 'date';
+  inputReserveEndDate.name = 'end-date';
+  inputReserveEndDate.placeholder = 'End Date';
+  inputReserveName.attributes.required = true;
+  reserveForm.appendChild(inputReserveEndDate);
+  const reserveSubmitButton = document.createElement('button');
+  reserveSubmitButton.type = 'submit';
+  reserveSubmitButton.className = 'reserve-submit-button';
+  reserveSubmitButton.innerHTML = 'Reserve';
+  reserveForm.appendChild(reserveSubmitButton);
+
   closeButton.addEventListener('click', () => {
     reserveModal.style.display = 'none';
   });
