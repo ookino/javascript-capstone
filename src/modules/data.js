@@ -8,6 +8,21 @@ const API = {
       return data;
     }
   },
+  getLikes: async () => {
+    const res = await fetch(
+      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lvQFdeSbvijlsDX1Y4VY/likes/',
+      { method: 'GET' }
+    );
+    if (!res.ok) {
+      throw new Error(`API error! status: ${res.status}`);
+    } else {
+      const data = await res.json();
+      return data;
+    }
+  },
+
+  getComments: async () => {},
+  getReservations: async () => {},
 };
 
 export default API;
