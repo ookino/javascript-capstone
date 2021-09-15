@@ -14,46 +14,34 @@
   <script defer src="main.bundle.js"></script></head>
   <body>
     <header class="header">
-      <nav class="nav-bar">
-        <div class="logo">
-          <i class="fas fa-utensils"></i>
-          <p>Ready Meals</p>
-        </div>
-        <div class="nav-buttons">
-          <a href="#Spaceships(6)" class="nav-button">Spaceships(6)</a>
-          <a href="#Planets" class="nav-button">Planets</a>
-          <a href="#Races" class="nav-button">Races</a>
-        </div>
-      </nav>
+      <div class="container">
+        <nav class="nav-bar">
+          <div class="logo">
+            <i class="fas fa-utensils"></i>
+            <p>Ready Meals</p>
+          </div>
+          <div class="nav-buttons">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="#Planets" class="nav-button">Planets</a>
+            <a href="#Races" class="nav-button">Races</a>
+          </div>
+        </nav>
+      </div>
     </header>
     <section>
-      <ul>
-        <li>
-          <img class="meal-image" src="./assets/sample.jpeg" alt="" />
-          <div class="meal-meta dflex">
-            <p>Meal title</p>
-            <button class="icn-btn"><i class="fa fa-home"></i></button>
-          </div>
-        </li>
-        <li>
-          <img class="meal-image" src="./assets/sample.jpeg" alt="" />
-          <div class="meal-meta dflex">
-            <p>Meal title</p>
-            <button class="icn-btn"><i class="fa fa-home"></i></button>
-          </div>
-        </li>
-        <li>
-          <img class="meal-image" src="./assets/sample.jpeg" alt="" />
-          <div class="meal-meta dflex">
-            <p>Meal title</p>
-            <button class="icn-btn"><i class="fa fa-home"></i></button>
-          </div>
-        </li>
-      </ul>
+      <div class="container">
+        <ul id="meal-list">
+          <!-- Dynamically render meal item -->
+        </ul>
+      </div>
     </section>
     <footer>
-      <div class="footer-bar">
-        <p>Created by Microverse under CC license</p>
+      <div class="container">
+        <p>
+          Created by <a class="footer-link" href="">@yaseer</a>,
+          <a href="" class="footer-link">@kossi</a> &
+          <a href="" class="footer-link">@lilian</a> under CC license
+        </p>
       </div>
     </footer>
   </body>
