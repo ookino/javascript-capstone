@@ -1,3 +1,5 @@
+import involvement from './involvement';
+
 const ul = document.getElementById('meal-list');
 const commentModal = document.getElementById('modal-comment');
 const reserveModal = document.getElementById('reservation-modal');
@@ -153,28 +155,41 @@ const renderReserveModal = (meal) => {
   reserveModal.appendChild(reserveContainer);
 };
 
-const renderMeals = (mealsData) => {
+const renderMeals = (mealsData, likesData) => {
   const { meals } = mealsData;
+
   meals.forEach((mealItem) => {
     const li = document.createElement('li');
     li.className = 'meal-item';
+
     const img = document.createElement('img');
     img.src = mealItem.strMealThumb;
     img.className = 'meal-image';
     li.appendChild(img);
+
     const div = document.createElement('div');
     div.className = 'meal-meta';
     li.appendChild(div);
+
     const p = document.createElement('p');
     p.className = 'meal-title';
     p.innerText = mealItem.strMeal;
     div.appendChild(p);
+
+    const likeSection = document.createElement('div');
+    likeSection.className = 'like-section';
+    div.appendChild(likeSection);
     const likeBtn = document.createElement('button');
     likeBtn.className = 'icn-btn';
-    div.appendChild(likeBtn);
+    likeSection.appendChild(likeBtn);
     const likeIcon = document.createElement('i');
     likeIcon.className = 'far fa-heart';
     likeBtn.appendChild(likeIcon);
+    const likeCount = document.createElement('p');
+    likeCount.className = 'like-count';
+    likeCount.innerText = involvement.likes(likesData, mealItem.idMeal);
+    likeSection.appendChild(likeCount);
+
     const commentBtn = document.createElement('button');
     commentBtn.className = 'btn';
     commentBtn.innerText = 'Comment';
@@ -187,6 +202,7 @@ const renderMeals = (mealsData) => {
       }
     });
     li.appendChild(commentBtn);
+
     const reserveBtn = document.createElement('button');
     reserveBtn.className = 'btn btn-alt cursor';
     reserveBtn.innerText = 'Reserve';
@@ -198,6 +214,7 @@ const renderMeals = (mealsData) => {
         reserveModal.style.display = 'block';
       }
     });
+
     li.appendChild(reserveBtn);
     ul.appendChild(li);
   });
