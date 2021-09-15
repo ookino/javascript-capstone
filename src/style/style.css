@@ -78,6 +78,11 @@ body {
   padding: 1em;
 }
 
+.reserve-details a {
+  color: black;
+  text-decoration: none;
+}
+
 .nav-buttons a:hover {
   text-decoration: underline;
 }
@@ -160,7 +165,8 @@ footer {
   overflow: scroll;
 }
 
-.close-modal {
+.close-modal,
+.close-btn {
   font-size: 2em;
   font-weight: bold;
   padding: 0 !important;
@@ -197,4 +203,94 @@ footer {
 .modal-title {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 3em;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.reserve-container {
+  width: 70%;
+  margin: 100px auto;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 1em;
+  box-shadow: rgba(100, 100, 111, 0.5) 0 10px 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.reserve-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  left: 90%;
+  top: 2rem;
+  font-size: 5em;
+  margin-right: 2rem;
+}
+
+.reserve-img {
+  width: 100%;
+  height: min-content;
+}
+
+.reserve-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2em;
+  align-items: center;
+  margin: 1rem;
+}
+
+.meal-info {
+  display: flex;
+  padding-right: 10rem;
+  padding-left: 10rem;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+.reserve-details {
+  width: 50%;
+}
+
+.category,
+.area,
+.recipe,
+.video-instruction {
+  color: #e85a4f;
+}
+
+.reservation-form-title {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 20rem;
+  height: 50px;
+  margin: 0.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.reserve-submit-button {
+  width: 10rem;
+  height: 50px;
+  margin: 0.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1em;
 }
