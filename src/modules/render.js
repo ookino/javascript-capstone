@@ -1,3 +1,4 @@
+import API from './data';
 import involvement from './involvement';
 
 const ul = document.getElementById('meal-list');
@@ -182,14 +183,21 @@ const renderMeals = (mealsData, likesData) => {
     likeSection.className = 'like-section';
     div.appendChild(likeSection);
     const likeBtn = document.createElement('button');
-    likeBtn.className = 'icn-btn';
+    likeBtn.className = 'icn-btn like-btn';
+
     likeSection.appendChild(likeBtn);
     const likeIcon = document.createElement('i');
     likeIcon.className = 'far fa-heart';
+
     likeBtn.appendChild(likeIcon);
     const likeCount = document.createElement('p');
     likeCount.className = 'like-count';
     likeCount.innerText = involvement.likes(likesData, mealItem.idMeal);
+    likeBtn.onclick = async () => {
+      await API.postLike(mealItem.idMeal);
+      const likesData = await API.getLikes().then((data) => data);
+      likeCount.innerText = involvement.likes(likesData, mealItem.idMeal);
+    };
     likeSection.appendChild(likeCount);
 
     const commentBtn = document.createElement('button');
