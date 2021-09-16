@@ -1,7 +1,7 @@
 import './style/style.css';
 
 import API from './modules/data';
-import renderMeals from './modules/render';
+import render from './modules/render/meals';
 
 const endpoint = 'https://www.themealdb.com/api/json/v1/1/';
 const likesEndpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lvQFdeSbvijlsDX1Y4VY/likes/';
@@ -15,7 +15,7 @@ const displayMeals = () => {
     API.getLikes(reserveEndpoint),
     API.getLikes(commentEndpoint),
   ]).then((data) => {
-    renderMeals(data[0], data[1]);
+    render(data[0], data[1]);
   });
 };
 
