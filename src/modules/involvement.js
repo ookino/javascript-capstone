@@ -13,6 +13,13 @@ const involvement = {
     }
     return 0;
   },
+  comments: (commentsData, mealID) => {
+    const commentLists = commentsData.find((i) => i.item_id === mealID);
+    if (commentLists !== undefined) {
+      return commentLists.comments;
+    }
+    return 0;
+  },
 };
 
 export default involvement;
