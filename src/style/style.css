@@ -10,6 +10,12 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
 :root {
   --primary-color: #e85a4f;
   --secondary-color: #272727;
@@ -204,6 +210,8 @@ footer {
 .modal-img {
   width: 100%;
   height: min-content;
+  border-radius: 1em;
+  border: 1px solid var(--secondary-color);
 }
 
 .modal-title {
@@ -287,10 +295,16 @@ footer {
 }
 
 input {
-  width: 20rem;
-  height: 50px;
-  margin: 0.5rem;
+  padding: 1em;
   font-family: 'Space Grotesk', sans-serif;
+  border-radius: 5px;
+}
+
+.comment-message {
+  padding: 1em;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .reserve-submit-button {
@@ -299,4 +313,41 @@ input {
   margin: 0.5rem;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1em;
+}
+
+.comment-form {
+  font-family: 'Space Grotesk', sans-serif;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 70%;
+}
+
+.no-comments {
+  color: #e8594fb7;
+  font-style: italic;
+}
+
+.all-comments {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.comment-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.comment-li {
+  border-bottom: 1px solid #8080802f;
+  width: 50%;
+}
+
+.comment-meta {
+  display: flex;
+  gap: 1em;
 }
