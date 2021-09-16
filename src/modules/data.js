@@ -12,7 +12,7 @@ const API = {
   getLikes: async () => {
     const res = await fetch(
       'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lvQFdeSbvijlsDX1Y4VY/likes/',
-      { method: 'GET' }
+      { method: 'GET' },
     );
     if (!res.ok) {
       throw new Error(`API error! status: ${res.status}`);
@@ -32,7 +32,7 @@ const API = {
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         },
-      }
+      },
     );
     if (!res.ok) {
       throw new Error(`API error! status: ${res.status}`);
@@ -45,7 +45,7 @@ const API = {
   getComments: async () => {
     const res = await fetch(
       'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/comments/',
-      { method: 'GET' }
+      { method: 'GET' },
     );
     if (!res.ok) {
       throw new Error(`API error! status: ${res.status}`);
@@ -57,7 +57,7 @@ const API = {
   getReservations: async () => {
     const res = await fetch(
       'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/reservations/',
-      { method: 'GET' }
+      { method: 'GET' },
     );
     if (!res.ok) {
       throw new Error(`API error! status: ${res.status}`);
