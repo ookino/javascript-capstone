@@ -71,3 +71,42 @@ describe('Comments Counter function Test', () => {
     expect(commentLength).toBe(4);
   });
 });
+
+describe('Test for Reservations Counter function', () => {
+  const reserveArray = [
+  ];
+  test('should return reservations array length of 0', () => {
+    const reserveLength = counter.meals(reserveArray);
+    expect(reserveLength).toBe(0);
+  });
+  test('should return meals array length of 2 ', () => {
+    reserveArray.push(
+      {
+        mealID: 1,
+        reserveName: 'Lilian',
+        reserveStartDate: '2021-02-01',
+        reserveEndDate: '2021-02-02',
+      },
+      {
+        mealID: 2,
+        reserveName: 'Yvonne',
+        reserveStartDate: '2021-02-03',
+        reserveEndDate: '2021-02-04',
+      },
+    );
+    const reserveLength = counter.meals(reserveArray);
+    expect(reserveLength).toBe(2);
+  });
+  test('should return meals array length of 3 ', () => {
+    reserveArray.push(
+      {
+        mealID: 3,
+        reserveName: 'Moraa',
+        reserveStartDate: '2021-02-14',
+        reserveEndDate: '2021-02-15',
+      },
+    );
+    const reserveLength = counter.meals(reserveArray);
+    expect(reserveLength).toBe(3);
+  });
+});
