@@ -114,7 +114,7 @@ const reserveModal = (meal) => {
       reservationList.innerHTML = `<li class='no-comments'>${`${data}. Add a new reservation`}</li>`;
     } else {
       const reservationCounter = counter.reservation(data);
-      sectionTitleHeader.innerHTML = `Reservation(${reservationCounter})`;
+      sectionTitleHeader.innerHTML = `Reservations(${reservationCounter})`;
       data.forEach((userReservation) => {
         displayReservations(reservationList, userReservation);
       });
