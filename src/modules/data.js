@@ -38,7 +38,7 @@ const API = {
       throw new Error(`API error! status: ${res.status}`);
     } else {
       const data = await res.text();
-      console.log('res => ', data);
+      return data;
     }
   },
 
@@ -76,15 +76,39 @@ const API = {
       return data;
     }
   },
-  getReservations: async () => {
+
+  getReservations: async (mealId) => {
     const res = await fetch(
-      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/reservations/',
+      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lvQFdeSbvijlsDX1Y4VY/reservations?item_id=${mealId}`,
       { method: 'GET' },
+    );
+    if (!res.ok) {
+      return 'No reservations available for this meal';
+    }
+    const data = await res.json();
+    return data;
+  },
+
+  postReservations: async (itemId, username, startdate, enddate) => {
+    const res = await fetch(
+      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lvQFdeSbvijlsDX1Y4VY/reservations/',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          item_id: itemId,
+          username,
+          date_start: startdate,
+          date_end: enddate,
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      },
     );
     if (!res.ok) {
       throw new Error(`API error! status: ${res.status}`);
     } else {
-      const data = await res.json();
+      const data = await res.text();
       return data;
     }
   },

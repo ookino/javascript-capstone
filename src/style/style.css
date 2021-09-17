@@ -10,6 +10,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 h1,
 h2,
 h3 {
@@ -189,12 +193,15 @@ footer {
 }
 
 .modal-inner {
-  width: 70%;
+  width: 60%;
+  margin: auto;
   margin: 100px auto;
   background-color: white;
   padding: 3em;
   border-radius: 1em;
   box-shadow: rgba(100, 100, 111, 0.5) 0 10px 20px 0;
+  justify-content: center;
+  text-align: center;
 }
 
 .modal-header {
@@ -205,6 +212,8 @@ footer {
 .modal-details {
   display: flex;
   gap: 2em;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-img {
@@ -253,6 +262,11 @@ footer {
   margin-right: 2rem;
 }
 
+.reservation-p {
+  margin: 0%;
+  padding: 0%;
+}
+
 .reserve-img {
   width: 100%;
   height: min-content;
@@ -284,7 +298,21 @@ footer {
   color: #e85a4f;
 }
 
+.reservation-list {
+  margin: 0.5rem 0%;
+}
+
 .reservation-form-title {
+  text-align: center;
+  margin: 0.5rem 0%;
+}
+
+.reservation {
+  width: 100%;
+  display: flex;
+}
+
+.section-title {
   text-align: center;
 }
 
@@ -316,12 +344,14 @@ input {
 }
 
 .comment-form {
+  margin: auto;
   font-family: 'Space Grotesk', sans-serif;
   margin-top: 2em;
   display: flex;
   flex-direction: column;
   gap: 1em;
   width: 70%;
+  text-align: center;
 }
 
 .no-comments {
@@ -330,10 +360,13 @@ input {
 }
 
 .all-comments {
+  margin: auto;
   margin-top: 2em;
   display: flex;
   flex-direction: column;
   gap: 1em;
+  align-items: center;
+  width: 100%;
 }
 
 .comment-ul {
@@ -344,7 +377,7 @@ input {
 
 .comment-li {
   border-bottom: 1px solid #8080802f;
-  width: 50%;
+  width: 100%;
 }
 
 .comment-meta {

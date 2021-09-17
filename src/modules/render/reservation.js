@@ -1,4 +1,29 @@
+import API from '../data';
+
 const modal = document.getElementById('reservation-modal');
+
+const displayReservations = (ul, userReservation) => {
+  const reservation = document.createElement('li');
+  reservation.className = 'reservation';
+  const reservationMeta = document.createElement('div');
+  reservationMeta.className = 'comment-meta';
+  reservation.appendChild(reservationMeta);
+
+  const startdate = document.createElement('p');
+  startdate.className = 'reservation-p';
+  startdate.innerText = `${userReservation.date_start} to`;
+  const enddate = document.createElement('p');
+  enddate.className = 'reservation-p';
+  enddate.innerText = `${userReservation.date_end} by`;
+  reservationMeta.appendChild(startdate);
+  reservationMeta.appendChild(enddate);
+  const name = document.createElement('p');
+  name.innerText = `: ${userReservation.username}`;
+  name.style.textTransform = 'Capitalize';
+  reservation.appendChild(name);
+  ul.appendChild(reservation);
+};
+
 const reserveModal = (meal) => {
   const reserveContainer = document.createElement('div');
   reserveContainer.className = 'reserve-container';
@@ -76,8 +101,19 @@ const reserveModal = (meal) => {
   sectionTitleHeader.className = 'section-title';
   sectionTitleHeader.innerHTML = 'Reservations(0)';
   sectionTitle.appendChild(sectionTitleHeader);
-  const reservationList = document.createElement('div');
+  const reservationList = document.createElement('li');
+  reservationList.className = 'reservation-list';
+  API.getReservations(meal.idMeal).then((data) => {
+    if (data === 'No reservations available for this meal') {
+      reservationList.innerHTML = `<li class='no-comments'>${`${data}. Add a new reservation`}</li>`;
+    } else {
+      data.forEach((userReservation) => {
+        displayReservations(reservationList, userReservation);
+      });
+    }
+  });
   sectionTitle.appendChild(reservationList);
+
   const reservationForm = document.createElement('div');
   reservationForm.className = 'reservation-form';
   reserveContent.appendChild(reservationForm);
@@ -95,22 +131,48 @@ const reserveModal = (meal) => {
   inputReserveName.attributes.required = true;
   reserveForm.appendChild(inputReserveName);
   const inputReserveStartDate = document.createElement('input');
-  inputReserveStartDate.type = 'date';
+  inputReserveStartDate.type = 'text';
   inputReserveStartDate.name = 'start-date';
-  inputReserveStartDate.placeholder = 'Start Date';
-  inputReserveName.attributes.required = true;
+  inputReserveStartDate.placeholder = 'Start Date (yyyy-mm-dd)';
+  inputReserveStartDate.attributes.required = true;
   reserveForm.appendChild(inputReserveStartDate);
   const inputReserveEndDate = document.createElement('input');
-  inputReserveEndDate.type = 'date';
+  inputReserveEndDate.type = 'text';
   inputReserveEndDate.name = 'end-date';
-  inputReserveEndDate.placeholder = 'End Date';
-  inputReserveName.attributes.required = true;
+  inputReserveEndDate.placeholder = 'End Date (yyyy-mm-dd)';
+  inputReserveEndDate.attributes.required = true;
   reserveForm.appendChild(inputReserveEndDate);
   const reserveSubmitButton = document.createElement('button');
   reserveSubmitButton.type = 'submit';
-  reserveSubmitButton.className = 'reserve-submit-button';
+  reserveSubmitButton.className = 'reserve-submit-button cursor';
   reserveSubmitButton.innerHTML = 'Reserve';
   reserveForm.appendChild(reserveSubmitButton);
+
+  reserveSubmitButton.onclick = (e) => {
+    e.preventDefault();
+    API.postReservations(
+      meal.idMeal,
+      inputReserveName.value,
+      inputReserveStartDate.value,
+      inputReserveEndDate.value,
+    ).then(() => {
+      if (reservationList.hasChildNodes()) {
+        reservationList.innerHTML = '';
+        API.getReservations(meal.idMeal).then((data) => {
+          if (data === 'No reservations available for this meal') {
+            reservationList.innerHTML = `<li class='no-comments'>${`${data}. Add a new reservation`}</li>`;
+          } else {
+            data.forEach((userReservation) => {
+              displayReservations(reservationList, userReservation);
+            });
+          }
+        });
+      }
+    });
+    inputReserveName.value = '';
+    inputReserveStartDate.value = '';
+    inputReserveEndDate.value = '';
+  };
 
   closeButton.addEventListener('click', () => {
     modal.style.display = 'none';

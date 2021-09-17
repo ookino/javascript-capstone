@@ -103,8 +103,7 @@ const commentModal = (meal) => {
       meal.idMeal,
       commenterName.value,
       commenterMessage.value,
-    ).then((data) => {
-      console.log(data);
+    ).then(() => {
       if (commentUl.hasChildNodes()) {
         commentUl.innerHTML = '';
         API.getComments(meal.idMeal).then((data) => {
@@ -118,6 +117,8 @@ const commentModal = (meal) => {
         });
       }
     });
+    commenterName.value = '';
+    commenterMessage.value = '';
   };
 
   modal.appendChild(modalInner);
