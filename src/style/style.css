@@ -209,13 +209,10 @@ footer {
 }
 
 .modal-details {
-  display: flex;
   gap: 2em;
 }
 
 .modal-img {
-  width: 100%;
-  height: min-content;
   border-radius: 1em;
   border: 1px solid var(--secondary-color);
 }

@@ -139,13 +139,13 @@ const reserveModal = (meal) => {
   inputReserveName.attributes.required = true;
   reserveForm.appendChild(inputReserveName);
   const inputReserveStartDate = document.createElement('input');
-  inputReserveStartDate.type = 'text';
+  inputReserveStartDate.type = 'date';
   inputReserveStartDate.name = 'start-date';
   inputReserveStartDate.placeholder = 'Start Date (yyyy-mm-dd)';
   inputReserveStartDate.attributes.required = true;
   reserveForm.appendChild(inputReserveStartDate);
   const inputReserveEndDate = document.createElement('input');
-  inputReserveEndDate.type = 'text';
+  inputReserveEndDate.type = 'date';
   inputReserveEndDate.name = 'end-date';
   inputReserveEndDate.placeholder = 'End Date (yyyy-mm-dd)';
   inputReserveEndDate.attributes.required = true;
@@ -162,7 +162,7 @@ const reserveModal = (meal) => {
       meal.idMeal,
       inputReserveName.value,
       inputReserveStartDate.value,
-      inputReserveEndDate.value,
+      inputReserveEndDate.value
     ).then(() => {
       if (reservationList.hasChildNodes()) {
         reservationList.innerHTML = '';
