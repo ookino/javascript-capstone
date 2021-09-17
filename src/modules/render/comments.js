@@ -105,7 +105,7 @@ const commentModal = (meal) => {
     API.postComment(
       meal.idMeal,
       commenterName.value,
-      commenterMessage.value,
+      commenterMessage.value
     ).then(() => {
       if (commentUl.hasChildNodes()) {
         commentUl.innerHTML = '';
@@ -113,6 +113,8 @@ const commentModal = (meal) => {
           if (data === 'No comments available for this meal') {
             commentUl.innerHTML = `<li class="no-comments">${`${data}. Add a new comment`}</li>`;
           } else {
+            const commentCounter = counter.comments(data);
+            allCommentsTitle.innerText = `All Comments(${commentCounter})`;
             data.forEach((userComment) => {
               displayComments(commentUl, userComment);
             });

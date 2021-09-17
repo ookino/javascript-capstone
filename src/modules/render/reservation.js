@@ -162,7 +162,7 @@ const reserveModal = (meal) => {
       meal.idMeal,
       inputReserveName.value,
       inputReserveStartDate.value,
-      inputReserveEndDate.value,
+      inputReserveEndDate.value
     ).then(() => {
       if (reservationList.hasChildNodes()) {
         reservationList.innerHTML = '';
@@ -170,6 +170,8 @@ const reserveModal = (meal) => {
           if (data === 'No reservations available for this meal') {
             reservationList.innerHTML = `<li class='no-comments'>${`${data}. Add a new reservation`}</li>`;
           } else {
+            const reservationCounter = counter.reservation(data);
+            sectionTitleHeader.innerHTML = `Reservations(${reservationCounter})`;
             data.forEach((userReservation) => {
               displayReservations(reservationList, userReservation);
             });
