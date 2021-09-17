@@ -1,4 +1,5 @@
 import API from '../data';
+import counter from '../counter';
 
 const modal = document.getElementById('reservation-modal');
 
@@ -97,9 +98,14 @@ const reserveModal = (meal) => {
 
   const sectionTitle = document.createElement('div');
   reserveContent.appendChild(sectionTitle);
-  const sectionTitleHeader = document.createElement('h2');
+  const sectionTitleHeader = document.createElement('div');
   sectionTitleHeader.className = 'section-title';
-  sectionTitleHeader.innerHTML = 'Reservations(0)';
+  const reservationCounterHeading = document.createElement('h2');
+  reservationCounterHeading.innerHTML = 'Reservations';
+  sectionTitleHeader.appendChild(reservationCounterHeading);
+  const reservationCounter = document.createElement('span');
+  reservationCounter.className = 'reservations-counter';
+  reservationCounterHeading.appendChild(reservationCounter);
   sectionTitle.appendChild(sectionTitleHeader);
   const reservationList = document.createElement('li');
   reservationList.className = 'reservation-list';
@@ -107,6 +113,8 @@ const reserveModal = (meal) => {
     if (data === 'No reservations available for this meal') {
       reservationList.innerHTML = `<li class='no-comments'>${`${data}. Add a new reservation`}</li>`;
     } else {
+      const reservationCounter = counter.reservation(data);
+      sectionTitleHeader.innerHTML = `Reservations(${reservationCounter})`;
       data.forEach((userReservation) => {
         displayReservations(reservationList, userReservation);
       });
@@ -173,7 +181,6 @@ const reserveModal = (meal) => {
     inputReserveStartDate.value = '';
     inputReserveEndDate.value = '';
   };
-
   closeButton.addEventListener('click', () => {
     modal.style.display = 'none';
   });
