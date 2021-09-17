@@ -83,23 +83,24 @@ npm test
 
 ## 🙎🏾‍♂️ Author
 
-### Author 1
+### Yaseer Okino
 
 - GitHub: [@yaseerokino](https://github.com/yaseerokino)
 - Twitter: [@yaseerokino](https://twitter.com/yaseerokino)
 - LinkedIn: [Yaseer Okino](https://linkedin.com/in/yaseerokino)
 
-### Author 2
+### Kossi
 
-- GitHub: [@yaseerokino](https://github.com/yaseerokino)
-- Twitter: [@yaseerokino](https://twitter.com/yaseerokino)
-- LinkedIn: [Yaseer Okino](https://linkedin.com/in/yaseerokino)
+- GitHub: [@kossi-stack](https://github.com/Kossi-stack/)
+- Twitter: [@Kossi-stack](https://twitter.com/SoloJean5)
+- LinkedIn: [Kossi Stack](https://www.linkedin.com/in/kossifioklou2406/)
 
-### Author 3
 
-- GitHub: [@yaseerokino](https://github.com/yaseerokino)
-- Twitter: [@yaseerokino](https://twitter.com/yaseerokino)
-- LinkedIn: [Yaseer Okino](https://linkedin.com/in/yaseerokino)
+
+### Lilian Moraa
+
+- GitHub: [@lily-coder](https://github.com/lily-coder/)
+- LinkedIn: [Lilian Moraa](https://www.linkedin.com/in/lilian-moraa-99950b1b8/)
 
 ## 👊🏾 Show your support
 
