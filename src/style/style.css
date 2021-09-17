@@ -201,7 +201,6 @@ footer {
   border-radius: 1em;
   box-shadow: rgba(100, 100, 111, 0.5) 0 10px 20px 0;
   justify-content: center;
-  text-align: center;
 }
 
 .modal-header {
@@ -212,7 +211,6 @@ footer {
 .modal-details {
   display: flex;
   gap: 2em;
-  flex-direction: column;
 }
 
 .modal-img {
@@ -343,14 +341,11 @@ input {
 }
 
 .comment-form {
-  margin: auto;
   font-family: 'Space Grotesk', sans-serif;
   margin-top: 2em;
   display: flex;
   flex-direction: column;
   gap: 1em;
-  width: 70%;
-  text-align: center;
 }
 
 .no-comments {
@@ -364,7 +359,6 @@ input {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  align-items: center;
   width: 100%;
 }
 
