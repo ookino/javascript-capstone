@@ -1,4 +1,5 @@
 import API from '../data';
+import counter from '../counter'
 
 const modal = document.getElementById('modal-comment');
 
@@ -69,6 +70,8 @@ const commentModal = (meal) => {
     if (data === 'No comments available for this meal') {
       commentUl.innerHTML = `<li class="no-comments">${`${data}. Add a new comment`}</li>`;
     } else {
+      let commentCounter = counter.comments(data);
+      allCommentsTitle.innerText = `All Comments(${commentCounter})`;
       data.forEach((userComment) => {
         displayComments(commentUl, userComment);
       });
