@@ -105,7 +105,7 @@ const commentModal = (meal) => {
     API.postComment(
       meal.idMeal,
       commenterName.value,
-      commenterMessage.value
+      commenterMessage.value,
     ).then(() => {
       if (commentUl.hasChildNodes()) {
         commentUl.innerHTML = '';

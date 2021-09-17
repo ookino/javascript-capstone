@@ -162,7 +162,7 @@ const reserveModal = (meal) => {
       meal.idMeal,
       inputReserveName.value,
       inputReserveStartDate.value,
-      inputReserveEndDate.value
+      inputReserveEndDate.value,
     ).then(() => {
       if (reservationList.hasChildNodes()) {
         reservationList.innerHTML = '';
