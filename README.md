@@ -2,11 +2,13 @@
 
 # Javascript Capstone Project
 
-<!-- <br>
+An API based webapp that displays Meals from the [MealsDB](https://www.themealdb.com/api.php) API. The features of this webapp include
 
+- An option to like a meal by clicking on the like button
+- A comment button that opens up a modal and allows users to leave comments
+- A reservation button that also opens a modal and allows users to make reservations
 
-
-<br> -->
+![](screenshot.png)
 
 **Additional description about the project and its features.**
 
@@ -20,12 +22,15 @@
 
 `Frameworks`
 
-- SASS
 - Webpack
 
 ## 📡 Live Demo
 
-<!-- [Link to Live Demo](https://leaderboard-webpack.netlify.app/) -->
+[Link to Live Demo](https://yaseerokino.github.io/javascript-capstone/)
+
+## 🎥 Video Link
+
+[Link to Project Video Description](https://www.loom.com/share/2f2b19014b6c42e69442095a2030a801)
 
 ## 🧰 Tools
 
@@ -45,15 +50,15 @@ To run this project you need [Node](https://nodejs.org/en/) and [NPM](https://do
 ### **Setup**
 
 If you have installed git you can clone the code to your machine, or download a ZIP of all the files directly.
-[Download the ZIP from this location](https://github.com/yaseerokino/leaderboard/archive/refs/heads/main.zip), or run the following [git](https://git-scm.com/downloads) command to clone the files to your machine:
+[Download the ZIP from this location](https://github.com/yaseerokino/javascript-capstone/archive/refs/heads/develop.zip), or run the following [git](https://git-scm.com/downloads) command to clone the files to your machine:
 
 ```bash
-git clone https://github.com/yaseerokino/leaderboard.git
+git clone https://github.com/yaseerokino/javascript-capstone.git
 ```
 
 ### **Install**
 
-Once the files are downloaded or cloned on your machine, open your terminal and `cd to "leaderboard" folder` and run the following commands:
+Once the files are downloaded or cloned on your machine, open your terminal and `cd to "javascript-capstone" folder` and run the following commands:
 
 **To install all dependencies**
 
@@ -81,21 +86,21 @@ Once all the dependencies have been installed and webpack has been built and con
 npm test
 ```
 
-## 🙎🏾‍♂️ Author
+## 🙎🏾‍♂️ Authors
 
-### Author 1
-
-- GitHub: [@yaseerokino](https://github.com/yaseerokino)
-- Twitter: [@yaseerokino](https://twitter.com/yaseerokino)
-- LinkedIn: [Yaseer Okino](https://linkedin.com/in/yaseerokino)
-
-### Author 2
+### Yaseer Okino
 
 - GitHub: [@yaseerokino](https://github.com/yaseerokino)
 - Twitter: [@yaseerokino](https://twitter.com/yaseerokino)
 - LinkedIn: [Yaseer Okino](https://linkedin.com/in/yaseerokino)
 
-### Author 3
+### Kossi
+
+- GitHub: [@kossi-stack](https://github.com/Kossi-stack/)
+- Twitter: [@Kossi-stack](https://twitter.com/SoloJean5)
+- LinkedIn: [Kossi Stack](https://www.linkedin.com/in/kossifioklou2406/)
+
+### Lilian Moraa
 
 - GitHub: [@yaseerokino](https://github.com/yaseerokino)
 - Twitter: [@yaseerokino](https://twitter.com/yaseerokino)
