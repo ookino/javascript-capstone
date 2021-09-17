@@ -100,11 +100,11 @@ npm test
 - Twitter: [@Kossi-stack](https://twitter.com/SoloJean5)
 - LinkedIn: [Kossi Stack](https://www.linkedin.com/in/kossifioklou2406/)
 
+
 ### Lilian Moraa
 
-- GitHub: [@yaseerokino](https://github.com/yaseerokino)
-- Twitter: [@yaseerokino](https://twitter.com/yaseerokino)
-- LinkedIn: [Yaseer Okino](https://linkedin.com/in/yaseerokino)
+- GitHub: [@lily-coder](https://github.com/lily-coder/)
+- LinkedIn: [Lilian Moraa](https://www.linkedin.com/in/lilian-moraa-99950b1b8/)
 
 ## 👊🏾 Show your support
 
