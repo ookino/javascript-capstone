@@ -30,7 +30,7 @@ An API based webapp that displays Meals from the [MealsDB](https://www.themealdb
 
 ## 🎥 Video Link
 
-[Link to Project Video Description](https://www.loom.com/share/2f2b19014b6c42e69442095a2030a801)
+[Link to Project Video Description](https://www.loom.com/share/3ba7b7be5da24625a037048aca2062f5)
 
 ## 🧰 Tools
 
@@ -99,7 +99,6 @@ npm test
 - GitHub: [@kossi-stack](https://github.com/Kossi-stack/)
 - Twitter: [@Kossi-stack](https://twitter.com/SoloJean5)
 - LinkedIn: [Kossi Stack](https://www.linkedin.com/in/kossifioklou2406/)
-
 
 ### Lilian Moraa
 
