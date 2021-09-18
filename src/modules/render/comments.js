@@ -12,6 +12,7 @@ const displayComments = (ul, userComment) => {
   const name = document.createElement('p');
   name.style.textTransform = 'Capitalize';
   name.innerText = userComment.username;
+  name.className = 'comment-name';
 
   const date = document.createElement('p');
   date.className = 'no-comments';
@@ -19,9 +20,10 @@ const displayComments = (ul, userComment) => {
   commentMeta.appendChild(name);
   commentMeta.appendChild(date);
   const message = document.createElement('p');
+  message.className = 'comments-message';
   message.innerText = userComment.comment;
   message.style.textTransform = 'Capitalize';
-  comment.appendChild(message);
+  commentMeta.appendChild(message);
   ul.appendChild(comment);
 };
 

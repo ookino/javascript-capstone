@@ -7,7 +7,7 @@ const displayReservations = (ul, userReservation) => {
   const reservation = document.createElement('li');
   reservation.className = 'reservation';
   const reservationMeta = document.createElement('div');
-  reservationMeta.className = 'comment-meta';
+  reservationMeta.className = 'reservation-meta';
   reservation.appendChild(reservationMeta);
 
   const startdate = document.createElement('p');
@@ -15,13 +15,13 @@ const displayReservations = (ul, userReservation) => {
   startdate.innerText = `${userReservation.date_start} to`;
   const enddate = document.createElement('p');
   enddate.className = 'reservation-p';
-  enddate.innerText = `${userReservation.date_end} by`;
+  enddate.innerText = `${userReservation.date_end} by:`;
   reservationMeta.appendChild(startdate);
   reservationMeta.appendChild(enddate);
   const name = document.createElement('p');
-  name.innerText = `: ${userReservation.username}`;
+  name.innerText = `${userReservation.username}`;
   name.style.textTransform = 'Capitalize';
-  reservation.appendChild(name);
+  reservationMeta.appendChild(name);
   ul.appendChild(reservation);
 };
 
@@ -134,18 +134,21 @@ const reserveModal = (meal) => {
   reservationForm.appendChild(reserveForm);
   const inputReserveName = document.createElement('input');
   inputReserveName.type = 'text';
+  inputReserveName.className = 'input-reserve-name';
   inputReserveName.name = 'username';
   inputReserveName.placeholder = 'Your Name';
   inputReserveName.attributes.required = true;
   reserveForm.appendChild(inputReserveName);
   const inputReserveStartDate = document.createElement('input');
   inputReserveStartDate.type = 'date';
+  inputReserveStartDate.className = 'input-reserve-start-date';
   inputReserveStartDate.name = 'start-date';
   inputReserveStartDate.placeholder = 'Start Date (yyyy-mm-dd)';
   inputReserveStartDate.attributes.required = true;
   reserveForm.appendChild(inputReserveStartDate);
   const inputReserveEndDate = document.createElement('input');
   inputReserveEndDate.type = 'date';
+  inputReserveEndDate.className = 'input-reserve-end-date';
   inputReserveEndDate.name = 'end-date';
   inputReserveEndDate.placeholder = 'End Date (yyyy-mm-dd)';
   inputReserveEndDate.attributes.required = true;
