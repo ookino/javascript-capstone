@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+:root {
+  --primary-color: #e85a4f;
+  --secondary-color: #272727;
+  --background-color: #fdf7f6;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dflex {
+  display: flex;
+}
+
+body {
+  color: var(--secondary-color);
+  background-color: var(--background-color);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  padding: 2em 20em;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 2px 20px 0;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.logo i {
+  margin-right: 0.3em;
+  color: var(--primary-color);
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.nav-buttons {
+  display: flex;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.nav-buttons a {
+  font-weight: 500;
+  color: #101820ff;
+  text-decoration: none;
+  padding: 1em;
+}
+
+.reserve-details a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-buttons a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+  flex-shrink: 0;
+  background-color: white;
+  bottom: 0;
+  text-align: center;
+}
+
+.footer-link {
+  color: var(--primary-color);
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.meal-item {
+  border-radius: 0.5em;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding: 24px;
+  margin: 1em 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 2px 20px 0;
+}
+
+.meal-image {
+  width: 100%;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+}
+
+.like-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.meal-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.icn-btn {
+  background: transparent;
+  border: none;
+  color: var(--secondary-color);
+  padding: 12px 16px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 1em;
+  border-radius: 0.5em;
+  border: none;
+  background: var(--primary-color);
+  color: var(--background-color);
+}
+
+.btn-alt {
+  margin-top: 1em;
+  color: var(--background-color);
+  background: var(--secondary-color);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(232, 90, 79, 0.4);
+  backdrop-filter: blur(4px);
+  overflow: scroll;
+}
+
+.close-modal,
+.close-btn {
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0 !important;
+}
+
+.close-modal:hover {
+  color: var(--primary-color);
+}
+
+.modal-inner {
+  width: 70%;
+  margin: auto;
+  margin: 100px auto;
+  background-color: white;
+  padding: 3em;
+  border-radius: 1em;
+  box-shadow: rgba(100, 100, 111, 0.5) 0 10px 20px 0;
+  justify-content: center;
+}
+
+.c {
+  width: 50%;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-details {
+  gap: 2em;
+}
+
+.modal-img {
+  width: 100%;
+  border-radius: 1em;
+  border: 1px solid var(--secondary-color);
+}
+
+.modal-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.modal-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3em;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.reserve-container {
+  width: 70%;
+  margin: 100px auto;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 1em;
+  box-shadow: rgba(100, 100, 111, 0.5) 0 10px 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.reserve-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  left: 90%;
+  top: 2rem;
+  font-size: 5em;
+  margin-right: 2rem;
+}
+
+.reservation-p {
+  margin: 0%;
+  padding: 0%;
+}
+
+.reserve-img {
+  width: 100%;
+  height: min-content;
+}
+
+.reserve-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2em;
+  align-items: center;
+  margin: 1rem;
+}
+
+.meal-info {
+  display: flex;
+  padding-right: 10rem;
+  padding-left: 10rem;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+.reserve-details {
+  width: 50%;
+}
+
+.category,
+.area,
+.recipe,
+.video-instruction {
+  color: #e85a4f;
+}
+
+.reservation-list {
+  margin: 0.5rem 0%;
+}
+
+.reservation-form-title {
+  text-align: center;
+  margin: 0.5rem 0%;
+}
+
+.reservation {
+  width: 100%;
+  display: flex;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  padding: 1em;
+  font-family: 'Space Grotesk', sans-serif;
+  border-radius: 5px;
+}
+
+.input-reserve-name,
+.input-reserve-start-date,
+.input-reserve-end-date {
+  width: 300px;
+}
+
+.comment-message {
+  padding: 1em;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.reserve-submit-button {
+  width: 10rem;
+  height: 50px;
+  margin: 0.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1em;
+}
+
+.comment-form {
+  font-family: 'Space Grotesk', sans-serif;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 50%;
+  text-align: center;
+}
+
+.no-comments {
+  color: #e8594fb7;
+  font-style: italic;
+}
+
+.all-comments {
+  margin: auto;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+.comment-ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  gap: 1em;
+  width: 70%;
+}
+
+.comment-li {
+  border-bottom: 1px solid #8080802f;
+  width: 100%;
+}
+
+.reservation-meta,
+.comment-meta {
+  display: flex;
+  width: 100%;
+}
+
+.reservation-meta p,
+.comment-meta p {
+  padding: 0% 0.3rem;
+}
+
+.comment-name {
+  width: 25%;
+  text-align: left;
+}
+
+.comments-message {
+  width: 70%;
+  text-align: left;
+}
+
+.no-reservations {
+  color: #e8594fb7;
+  font-style: italic;
+}

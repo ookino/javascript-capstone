@@ -3,9 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webpack boiler</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Ready Meals</title>
   </head>
   <body>
-    <h1>Working......</h1>
+    <header class="header">
+      <div class="container">
+        <nav class="nav-bar">
+          <div class="logo">
+            <i class="fas fa-utensils"></i>
+            <p>Ready Meals</p>
+          </div>
+          <div class="nav-buttons">
+            <a href="index.html" class="nav-button"
+              >Meals(<span id="meal-counter"></span>)</a
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <ul id="meal-list">
+          <!-- Dynamically render meal item -->
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>
+          Created by <a class="footer-link" href="">@yaseer</a>,
+          <a href="" class="footer-link">@kossi</a> &
+          <a href="" class="footer-link">@lilian</a> under CC license
+        </p>
+      </div>
+    </footer>
+    <section id="modal-comment" class="modal"></section>
+    <aside id="reservation-modal" class="modal"></aside>
   </body>
 </html>
