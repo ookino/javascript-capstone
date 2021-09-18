@@ -111,7 +111,7 @@ const reserveModal = (meal) => {
   reservationList.className = 'reservation-list';
   API.getReservations(meal.idMeal).then((data) => {
     if (data === 'No reservations available for this meal') {
-      reservationList.innerHTML = `<li class='no-comments'>${`${data}. Add a new reservation`}</li>`;
+      reservationList.innerHTML = `<li class='no-reservations'>${`${data}. Add a new reservation`}</li>`;
     } else {
       const reservationCounter = counter.reservation(data);
       sectionTitleHeader.innerHTML = `Reservations(${reservationCounter})`;
@@ -171,7 +171,7 @@ const reserveModal = (meal) => {
         reservationList.innerHTML = '';
         API.getReservations(meal.idMeal).then((data) => {
           if (data === 'No reservations available for this meal') {
-            reservationList.innerHTML = `<li class='no-comments'>${`${data}. Add a new reservation`}</li>`;
+            reservationList.innerHTML = `<li class='no-reservations'>${`${data}. Add a new reservation`}</li>`;
           } else {
             const reservationCounter = counter.reservation(data);
             sectionTitleHeader.innerHTML = `Reservations(${reservationCounter})`;

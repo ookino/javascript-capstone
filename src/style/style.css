@@ -415,3 +415,8 @@ input {
   width: 70%;
   text-align: left;
 }
+
+.no-reservations {
+  color: #e8594fb7;
+  font-style: italic;
+}
