@@ -405,8 +405,7 @@ input {
   padding: 0% 0.3rem;
 }
 
-.comment-name,
-.no-comments {
+.comment-name {
   width: 25%;
   text-align: left;
 }
